@@ -49,6 +49,36 @@ def submit():
 
         return jsonify({"message": "User data successfully stored"}), 201
 
+@app.route('/profile', methods=['GET'])
+def profile():
+    """Fetch the user data from the database and return it as JSON."""
+    # Get user data from the database
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    cursor.execute('SELECT id, name, email, age, parents_email_id, parents_phone_number FROM users')
+    rows = cursor.fetchall()  # Fetch all rows from the query
+    
+    conn.close()
+
+    # If no users are found, return an empty list
+    if not rows:
+        return jsonify({"message": "No user data found"}), 404
+
+    # Convert the data into a list of dictionaries for easy JSON conversion
+    users = []
+    for row in rows:
+        user = {
+            "id": row[0],
+            "name": row[1],
+            "email": row[2],
+            "age": row[3],
+            "parents_email_id": row[4],
+            "parents_phone_number": row[5]
+        }
+        users.append(user)
+
+    return jsonify(users)
+
 # Initialize the database and run the app
 if __name__ == '__main__':
     init_db()
