@@ -23,7 +23,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-@app.route('/submit', methods=['POST'])
+@app.route('http://127.0.0.1:5500//submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
         # Parse form data from the request
@@ -49,7 +49,7 @@ def submit():
 
         return jsonify({"message": "User data successfully stored"}), 201
 
-@app.route('/profile', methods=['GET'])
+@app.route('http://127.0.0.1:5500//profile', methods=['GET'])
 def profile():
     """Fetch the user data from the database and return it as JSON."""
     # Get user data from the database
