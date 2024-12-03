@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions & Donations</title>
+    
+
+</head>
+<body>
+    <header>
+        <h1>Support Our Platform</h1>
+        <p>Choose a subscription or make a donation to help us grow!</p>
+    </header>
+
+    <main>
+        <section class="subscriptions">
+            <h2>Subscription Plans</h2>
+            <div class="plan-container">
+                <div class="plan">
+                    <h3>6-Month Plan</h3>
+                    <p>Get access to personalized tutors and tailored learning plans.</p>
+                    <p class="price"><strong>₹499/month</strong></p>
+                    <button type="button" onclick="subscribe('6-Month Plan')">Subscribe</button>
+                </div>
+                <div class="plan popular">
+                    <h3>Annual Plan</h3>
+                    <p>Enjoy year-long access to all features and premium content.</p>
+                    <p class="price"><strong>₹449/month</strong></p>
+                    <button type="button" onclick="subscribe('Annual Plan')">Subscribe</button>
+                    
+                    <span class="badge">Most Popular</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="donations">
+            <h2>Make a Donation</h2>
+            <p>Your support helps us provide quality education to everyone.</p>
+            <div class="donation-options">
+                <button type="button" onclick="donate(100)">₹100</button>
+                <button type="button" onclick="donate(500)">₹500</button>
+                <button type="button" onclick="donate(1000)">₹1000</button>
+            </div>
+            <input type="number" id="custom-amount" placeholder="Enter custom amount">
+            <button type="button" onclick="donateCustom()">Donate</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Support Our Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
