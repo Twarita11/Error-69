@@ -15,7 +15,9 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
             email TEXT NOT NULL,
-            age INTEGER NOT NULL
+            age INTEGER NOT NULL,
+            parents_email_id NOT NULL,
+            parents_phone_number INTEGER NOT NULL
         )
     ''')
     conn.commit()
@@ -28,10 +30,12 @@ def submit():
         name = request.form.get('name')
         email = request.form.get('email')
         age = request.form.get('age')
+        parents_email_id = request.form.get('parents_email_id')
+        parents_phone_number = request.form.get('parents_phone_number')
 
         # Validate fields
         if not name or not email or not age or not age.isdigit():
-            return jsonify({"error": "Invalid data. 'name', 'email', and 'age' are required."}), 400
+            return jsonify({"error": "Invalid data. 'name', 'email', 'parents_email_id', 'parents phone number' and 'age' are required."}), 400
 
         # Convert age to integer
         age = int(age)
@@ -39,7 +43,7 @@ def submit():
         # Store data in the database
         conn = sqlite3.connect(DATABASE)
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO users (name, email, age) VALUES (?, ?, ?)', (name, email, age))
+        cursor.execute('INSERT INTO users (name, email, age, parents_email_id, parents_phone_number) VALUES (?, ?, ?, ?, ?)', (name, email, age, parents_email_id, parents_phone_number))
         conn.commit()
         conn.close()
 
