@@ -92,7 +92,7 @@
 <body>
     <h1>Fill up all the credentials with the correct details</h1>
 
-    <form action="/Submit" method="POST">
+    <form action="http://127.0.0.1:5000/submit" method="POST">
         <div>
             <label for="name">Name</label>
             <input id="name" type="text" name="name" placeholder="Enter your name" required>
@@ -109,10 +109,7 @@
             <label for="password">Password</label>
             <input id="password" type="password" name="password" placeholder="Enter your password" required>
         </div>
-        <div>
-            <label for="dob">Date of Birth</label>
-            <input id="dob" type="date" name="dob" required>
-        </div>
+
         <div>
             <label for="gender">Gender</label>
             <select name="gender" id="gender" required>
@@ -122,6 +119,28 @@
                 <option value="Other">Other</option>
             </select>
         </div>
+
+        <div>
+            <label for="email">Parents Email ID</label>
+            <input id="email" type="email" name="email" placeholder="Enter your email ID" required>
+        </div>
+
+        <div>
+            <label for="phone">Parents Phone Number</label>
+            <input id="phone" type="tel" name="phone" placeholder="Enter your parents phone number" required>
+        </div>
+
+        <div>
+            <label for="age">Age</label>
+            <input id="age" type="number" name="age" placeholder="Enter your age" required>
+        </div>
+
+
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" type="date" name="dob" required>
+        </div>
+
         <div>
             <input type="submit" value="Submit">
         </div>
