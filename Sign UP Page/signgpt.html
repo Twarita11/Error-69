@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Fill up all the credentials with the correct details</h1>
+    <form action="/submit.php" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" placeholder="Enter your phone number" required>
+
+        <label for="email">Email Id</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" required>
+
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+
+</html>
