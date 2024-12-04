@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <style>
+        /* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Style for the title */
+h1 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Style for the textarea */
+textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Style for textarea focus */
+textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+/* Style for the button */
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Style for button hover */
+button:hover {
+    background-color: #357ab7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    textarea {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Text to Speech Converter</h1>
+    <textarea id="text" rows="5" cols="50" placeholder="Enter text here"></textarea><br><br>
+    <button onclick="textToSpeech()">Speak</button>
+
+    <script>
+        function textToSpeech() {
+            const text = document.getElementById("text").value;
+            if (!text) {
+                alert("Please enter some text!");
+                return;
+            }
+            
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US"; // Set the language
+            speech.pitch = 1; // Set pitch (0 to 2)
+            speech.rate = 1; // Set rate (0.1 to 10)
+            speech.volume = 1; // Set volume (0 to 1)
+
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>

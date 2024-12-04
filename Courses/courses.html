@@ -5,22 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Beautiful gradient background */
+            color: #2d2d2d; /* Dark gray text for better contrast */
+            padding: 20px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Header Styles */
+        h1 {
+            font-size: 3em;
+            color: white; /* White for the header text */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for text contrast */
+            padding-bottom: 10px;
+            border-bottom: 5px solid #fff;
+            display: inline-block;
+            animation: fadeIn 2s ease-in-out; /* Adding fade-in animation */
+        }
+
+        /* Subheadings */
+        h2, h3, h4 {
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #ffffff; /* White color for better contrast */
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 2em;
+            color: #ffcc00; /* Gold color */
+        }
+
+        h4 {
+            font-size: 1.8em;
+            color: #ff7f50; /* Coral color */
+        }
+
+        /* Paragraph Styles */
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #fff;
+            margin-top: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Link Styles */
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px 25px;
+            background-color: #ff7f50; /* Coral background */
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            background-color: #ffcc00; /* Hover effect with yellow background */
+            color: #000;
+            border: 2px solid #ff7f50; /* Coral border on hover */
+            transform: scale(1.1); /* Slightly increase size */
+        }
+
+        /* Card-style Boxes for Content */
+        .course-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 15px auto;
+            max-width: 800px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px); /* Slight lifting effect on hover */
+        }
+
+        /* Divider Line */
+        .divider {
+            margin: 30px 0;
+            border-top: 3px solid #ff7f50;
+            width: 50%;
+            margin: 30px auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2, h3, h4 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            a {
+                font-size: 1.1em;
+                padding: 12px 20px;
+            }
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
-   <h1>SO THESE ARE THE COURSES WE ARE GOING TO OFFER YOU GUYS</h1> 
-    <div>   </div>
-    <big><h2>1.Mathematics</h2><div></div></big>
-    <big><big><h3>2.English</h3></big></big>
-    <big><big><big><h4>3.General Science</h4></big></big></big>
+    <h1>Welcome to Our Amazing Courses!</h1>
+    <div class="divider"></div>
 
-   <big><p>For more information about each course: <div></div>
-    <a href="/Courses/Subjects/math.html" target="_blank">Click Here</a> for knowing more about Mathematics. <div></div>
-    <a href="/Courses/Subjects/eng.html" target="_blank">Click here </a>for knowing more about English <div></div>
-    <a href="/Courses/Subjects/gs.html" target="_blank">Click here</a> for knowing more about General Science <div></div>
-</p></big> 
+    <!-- Mathematics Course -->
+    <div class="course-card">
+        <h2>1. Mathematics</h2>
+        <p>Explore the world of numbers, equations, and problem-solving in our engaging Mathematics course!</p>
+        <a href="/Courses/Subjects/math.html" target="_blank">Learn More About Mathematics</a>
+    </div>
 
-<a href=""></a>
+    <!-- English Course -->
+    <div class="course-card">
+        <h3>2. English</h3>
+        <p>Enhance your reading, writing, and grammar skills in our interactive English course!</p>
+        <a href="/Courses/Subjects/eng.html" target="_blank">Learn More About English</a>
+    </div>
+
+    <div class="divider"></div>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ from flask_pymongo import PyMongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 uri = "mongodb+srv://twaritas4:hello1234@cluster0.bqpmw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 mongo = MongoClient(uri, server_api=ServerApi('1'))
@@ -71,5 +71,6 @@ def index():
     return render_template('sign.html')
 
 # Initialize the app and run
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True)
+    

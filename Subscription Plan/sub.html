@@ -8,17 +8,19 @@
     <style>
         /* General Reset */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         /* Body Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Verdana', sans-serif;
             line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #000;
+            /* Black background */
+            color: #f1c40f;
+            /* Yellow text color */
             padding: 20px;
         }
 
@@ -26,33 +28,45 @@
         h1 {
             text-align: center;
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: #fff;
+            /* White for header */
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* Subheading Styling */
+        h2,
+        h3,
+        h4 {
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        /* Primary Subheading */
         h2 {
             font-size: 2rem;
-            color: #2980b9;
-            margin-bottom: 15px;
+            color: #f1c40f;
+            border-bottom: 3px solid #f1c40f;
+            padding-bottom: 5px;
         }
 
+        /* Secondary Subheading */
         h3 {
             font-size: 1.5rem;
-            color: #34495e;
-            margin-bottom: 10px;
+            color: #e67e22;
         }
 
+        /* Tertiary Subheading */
         h4 {
             font-size: 1.2rem;
-            color: #8e44ad;
-            margin-bottom: 10px;
+            color: #f39c12;
         }
 
         /* Text Styling */
         p {
             font-size: 1rem;
-            color: #7f8c8d;
+            color: #bdc3c7;
             margin-bottom: 10px;
         }
 
@@ -60,45 +74,67 @@
         big big {
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #555;
+            color: #bdc3c7;
         }
 
         big big div {
             margin-bottom: 10px;
         }
 
-        /* Links */
+        /* Links Styling */
         a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 10px 20px;
+            background-color: #f1c40f;
             border-radius: 5px;
-            background-color: #27ae60;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease-in-out;
         }
 
         a:hover {
-            background-color: #1e8449;
+            background-color: #f39c12;
+            color: #000;
         }
 
         /* Section Styling */
         div {
             margin: 20px 0;
             padding: 20px;
-            background-color: white;
+            background-color: #34495e;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Basic Plan */
+        /* Basic Plan Styling */
         div:nth-child(1) {
-            border-left: 5px solid #3498db;
+            border-left: 5px solid #f1c40f;
         }
 
-        /* Premium Plan */
+        /* Premium Plan Styling */
         div:nth-child(2) {
-            border-left: 5px solid #9b59b6;
+            border-left: 5px solid #e67e22;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2,
+            h3,
+            h4 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            a {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
@@ -111,29 +147,33 @@
     <div></div>
     <br>
     <big>
-        <h2>Basic Subscription Plan</h2>
+        <h2>Basic Subscription Plan (Rs.999/- For 3 Months)</h2>
     </big>
     <big>
         <h3>In this Basic plan of subscription you will be able to access the following things:</h3>
-        <div></div>
     </big>
-    <big><big>1. The student can access any two out of 4 subjects. <div></div>
-            2. Multisensory Learning Materials: <div></div>
-            3. Customizable Learning Paths: <div></div>
-            4. Gamified Learning Experience: <div></div></big></big>
-    <big><a href="payment.html" target="_blank">Click Here</a> to purchase this plan.</big>
+    <big><big>
+            <div></div>
+            1. Multisensory Learning Materials: <br><br>
+            2. Customizable Learning Paths: <br><br>
+            3. Gamified Learning Experience: <br><br>
+        <br>
+    <big><a href="ptpm.html" target="_blank">Click Here</a> to purchase this plan.</big>
 
-    <h2>Premium Subscribe Plan</h2>
+    <h2>Premium Subscribtion Plan (Rs.1,500/- For 6 Months)</h2>
     <big><big>
             <h4>This is the most popular plan we ever bought to you guys:</h4>
         </big></big>
-    <div></div>
-    <p> <big> <b>1. All 4 out of 4 subjects will be provided to the student <div></div>
-        2. There will be a personalized tutors for every 7 students <div></div>
-        3. The students will be provided with progressive report <div></div>
-        4. Every mentor will be providing a monthly feedback on each of the student <div></div> </b>
-    </big> </p>
-  
+   
+    <p> <big> <b>
+                <div></div>
+                1. There will be a personalized tutor for every 7 students <br><br>
+                2. The students will be provided with progressive report <br><br>
+                3. Every mentor will be providing a monthly feedback on each of the student <br><br>
+                4. Exclusive GLAT course <br><br>
+            </b>
+        </big> </p>
+
     <big><a href="ptpm.html" target="_blank">Click here</a> to buy the Premium subscription plan</big>
 
 

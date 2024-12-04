@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English</title>
+    <title>Learn English Alphabets</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #6c63ff;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        main {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .alphabet-section {
+            margin-top: 20px;
+        }
+
+        .letters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .letter {
+            background-color: #6c63ff;
+            color: white;
+            font-size: 1.5em;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .letter:hover {
+            background-color: #5548c8;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>English</h1>
-    
+    <header>
+        <h1>Learn English Alphabets</h1>
+        <p>Click on any letter to hear its pronunciation!</p>
+    </header>
+
+    <main>
+        <!-- Alphabet Section -->
+        <section class="alphabet-section">
+            <div class="letters-container"></div>
+        </section>
+
+        <!-- Simple Words Section -->
+        <section class="words-section">
+            <h2>Learn Simple Words</h2>
+            <p>Click on a word to hear its pronunciation!</p>
+            <div class="words-container">
+                <!-- Words will be generated dynamically -->
+            </div>
+        </section>
+        <br>
+        <big><a href="read.html" target="_blank">Click here</a> to listen to what you want.</big>
+    </main>
+
+
+    <footer>
+        <p>Learn English Alphabets & Simple Words &copy; 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
