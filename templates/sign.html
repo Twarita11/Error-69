@@ -92,7 +92,7 @@
 <body>
     <h1>Fill up all the credentials with the correct details</h1>
 
-    <form action="http://127.0.0.1:5000/submit" method="POST">
+    <form id="userForm">
         <div>
             <label for="name">Name</label>
             <input id="name" type="text" name="name" placeholder="Enter your name" required>
@@ -121,20 +121,19 @@
         </div>
 
         <div>
-            <label for="email">Parents Email ID</label>
-            <input id="email" type="email" name="email" placeholder="Enter your email ID" required>
+            <label for="parents_email_id">Parents Email ID</label>
+            <input id="parents_email_id" type="email" name="parents_email_id" placeholder="Enter your parent's email ID" required>
         </div>
 
         <div>
-            <label for="phone">Parents Phone Number</label>
-            <input id="phone" type="tel" name="phone" placeholder="Enter your parents phone number" required>
+            <label for="parents_phone_number">Parents Phone Number</label>
+            <input id="parents_phone_number" type="tel" name="parents_phone_number" placeholder="Enter your parent's phone number" required>
         </div>
 
         <div>
             <label for="age">Age</label>
             <input id="age" type="number" name="age" placeholder="Enter your age" required>
-        </div>
-
+        </div>
 
         <div>
             <label for="dob">Date of Birth</label>
@@ -145,6 +144,46 @@
             <input type="submit" value="Submit">
         </div>
     </form>
+
+    <script>
+        // JavaScript to handle form submission via fetch API
+        document.getElementById('userForm').addEventListener('submit', async function (event) {
+            event.preventDefault();  // Prevent the form from reloading the page
+
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                gender: document.getElementById('gender').value,
+                parents_email_id: document.getElementById('parents_email_id').value,
+                parents_phone_number: document.getElementById('parents_phone_number').value,
+                age: document.getElementById('age').value,
+                dob: document.getElementById('dob').value
+            };
+
+            // Send the data to the backend
+            try {
+                const response = await fetch('http://127.0.0.1:5000/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',  // Specify the content type as JSON
+                    },
+                    body: JSON.stringify(formData),  // Convert the form data to JSON
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert(result.message);  // Display success message
+                } else {
+                    alert(result.error);  // Display error message
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the form');
+            }
+        });
+    </script>
 </body>
 
 </html>
