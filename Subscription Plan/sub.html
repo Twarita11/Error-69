@@ -1,56 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscriptions & Donations</title>
-    
+    <title>Subscription Plan</title>
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* Subheading Styling */
+        h2 {
+            font-size: 2rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        /* Text Styling */
+        p {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        /* List Styling */
+        big big {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        big big div {
+            margin-bottom: 10px;
+        }
+
+        /* Links */
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #27ae60;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #1e8449;
+        }
+
+        /* Section Styling */
+        div {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Basic Plan */
+        div:nth-child(1) {
+            border-left: 5px solid #3498db;
+        }
+
+        /* Premium Plan */
+        div:nth-child(2) {
+            border-left: 5px solid #9b59b6;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>Support Our Platform</h1>
-        <p>Choose a subscription or make a donation to help us grow!</p>
-    </header>
+    <h1>Choose your plan of subscription:</h1>
+    <big><big></big>
+        <p><b>These are the following subscription plans offered to you guys:</b></p>
+    </big>
+    <div></div>
+    <br>
+    <big>
+        <h2>Basic Subscription Plan</h2>
+    </big>
+    <big>
+        <h3>In this Basic plan of subscription you will be able to access the following things:</h3>
+        <div></div>
+    </big>
+    <big><big>1. The student can access any two out of 4 subjects. <div></div>
+            2. Multisensory Learning Materials: <div></div>
+            3. Customizable Learning Paths: <div></div>
+            4. Gamified Learning Experience: <div></div></big></big>
+    <big><a href="payment.html" target="_blank">Click Here</a> to purchase this plan.</big>
 
-    <main>
-        <section class="subscriptions">
-            <h2>Subscription Plans</h2>
-            <div class="plan-container">
-                <div class="plan">
-                    <h3>6-Month Plan</h3>
-                    <p>Get access to personalized tutors and tailored learning plans.</p>
-                    <p class="price"><strong>₹499/month</strong></p>
-                    <button type="button" onclick="subscribe('6-Month Plan')">Subscribe</button>
-                </div>
-                <div class="plan popular">
-                    <h3>Annual Plan</h3>
-                    <p>Enjoy year-long access to all features and premium content.</p>
-                    <p class="price"><strong>₹449/month</strong></p>
-                    <button type="button" onclick="subscribe('Annual Plan')">Subscribe</button>
-                    
-                    <span class="badge">Most Popular</span>
-                </div>
-            </div>
-        </section>
+    <h2>Premium Subscribe Plan</h2>
+    <big><big>
+            <h4>This is the most popular plan we ever bought to you guys:</h4>
+        </big></big>
+    <div></div>
+    <p> <big> <b>1. All 4 out of 4 subjects will be provided to the student <div></div>
+        2. There will be a personalized tutors for every 7 students <div></div>
+        3. The students will be provided with progressive report <div></div>
+        4. Every mentor will be providing a monthly feedback on each of the student <div></div> </b>
+    </big> </p>
+  
+    <big><a href="ptpm.html" target="_blank">Click here</a> to buy the Premium subscription plan</big>
 
-        <section class="donations">
-            <h2>Make a Donation</h2>
-            <p>Your support helps us provide quality education to everyone.</p>
-            <div class="donation-options">
-                <button type="button" onclick="donate(100)">₹100</button>
-                <button type="button" onclick="donate(500)">₹500</button>
-                <button type="button" onclick="donate(1000)">₹1000</button>
-            </div>
-            <input type="number" id="custom-amount" placeholder="Enter custom amount">
-            <button type="button" onclick="donateCustom()">Donate</button>
-        </section>
-    </main>
 
-    <footer>
-        <p>© 2024 Support Our Platform. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
+
 </html>
