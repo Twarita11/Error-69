@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematics</title>
+    <title>Learn Math Basics</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        header {
+            background-color: #6c63ff;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .menu {
+            margin: 20px 0;
+        }
+
+        .topic-button {
+            display: block;
+            margin: 10px auto;
+            padding: 15px 25px;
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .topic-button:hover {
+            background-color: #5548c8;
+        }
+
+        #content {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Mathematics</h1>
-    
+    <header>
+        <h1>Math for Everyone</h1>
+        <p>Learn math step by step in a fun and interactive way!</p>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>Choose a Topic</h2>
+            <button class="topic-button" onclick="navigateTo('numbers')">Number Basics</button>
+            <button class="topic-button" onclick="navigateTo('addition')">Addition</button>
+            <button class="topic-button" onclick="navigateTo('subtraction')">Subtraction</button>
+            <button class="topic-button" onclick="navigateTo('practice')">Practice Exercises</button>
+        </section>
+
+        <a href="https://www.youtube.com/watch?v=wUQuxUjCH3s" target="_blank">Click here</a> to understand Addation and Substraction easily.
+
+        <section id="content">
+            <!-- Dynamic content will load here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Learn Math Basics &copy; 2024</p>
+    </footer>
+
+    <script>// Navigation Function
+        function navigateTo(topic) {
+            const content = document.getElementById('content');
+            if (topic === 'numbers') {
+                loadNumberBasics(content);
+            } else if (topic === 'addition') {
+                loadAddition(content);
+            } else if (topic === 'subtraction') {
+                loadSubtraction(content);
+            } else if (topic === 'practice') {
+                loadPractice(content);
+            }
+        }
+
+        // Number Basics
+        function loadNumberBasics(container) {
+            const numbers = Array.from({ length: 20 }, (_, i) => i + 1);
+            container.innerHTML = '<h2>Learn Numbers</h2>';
+            numbers.forEach(number => {
+                const button = document.createElement('button');
+                button.classList.add('number');
+                button.innerText = number;
+                button.onclick = () => readAloud(number.toString());
+                container.appendChild(button);
+            });
+        }
+
+        // Addition
+        function loadAddition(container) {
+            container.innerHTML = `
+                <h2>Learn Addition</h2>
+                <p>Click to see examples</p>
+                <p>2 + 3 = <span onclick="readAloud('Five')">5</span></p>
+                <p>4 + 2 = <span onclick="readAloud('Six')">6</span></p>
+            `;
+        }
+
+        // Subtraction
+        function loadSubtraction(container) {
+            container.innerHTML = `
+                <h2>Learn Subtraction</h2>
+                <p>Click to see examples</p>
+                <p>5 - 2 = <span onclick="readAloud('Three')">3</span></p>
+                <p>7 - 4 = <span onclick="readAloud('Three')">3</span></p>
+            `;
+        }
+
+        // Practice Exercises
+        function loadPractice(container) {
+            container.innerHTML = `
+                <h2>Practice Exercises</h2>
+                <p>Solve the problems and click to hear the answers:</p>
+                <p>3 + 2 = <span onclick="readAloud('Five')">5</span></p>
+                <p>6 - 1 = <span onclick="readAloud('Five')">5</span></p>
+            `;
+        }
+
+        // Text-to-Speech
+        function readAloud(text) {
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.rate = 0.8; // Slow speaking rate
+            utterance.pitch = 1.2; // Slightly higher pitch
+            synth.speak(utterance);
+        }
+    </script>
 </body>
+
 </html>

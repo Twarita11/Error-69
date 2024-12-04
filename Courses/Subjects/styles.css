@@ -1,0 +1,36 @@
+/* Styles for Simple Words Section */
+.words-section {
+    margin-top: 30px;
+}
+
+.words-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.words-section p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.words-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.word {
+    background-color: #ff914d;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.word:hover {
+    background-color: #e67439;
+}

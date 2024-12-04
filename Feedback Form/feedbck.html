@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #b375ab);
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h1 {
+            font-size: 3em;
+            color: rgb(107, 37, 37);
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Form Elements */
+        input, textarea, button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ff7f50;
+            border-radius: 10px;
+            font-size: 1.1em;
+            background-color: #fff;
+            color: #333;
+        }
+
+        input:focus, textarea:focus, button:focus {
+            outline: none;
+            border-color: #feb47b;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #ff7f50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #feb47b;
+            color: #333;
+        }
+
+        /* Label Styling */
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .form-container {
+                padding: 20px;
+                width: 80%;
+            }
+
+            input, textarea, button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>We'd Love to Hear Your Feedback!</h1>
+
+    <div class="form-container">
+        <form action="submit-feedback.php" method="POST">
+            <!-- Name Field -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Email Field -->
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Rating Field -->
+            <label for="rating">Rate Our Service:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+
+            <!-- Feedback Message Field -->
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your feedback here" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
