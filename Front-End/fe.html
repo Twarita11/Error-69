@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Web Page</title>
+    <title>GLAT Academy</title>
     <link rel="stylesheet" href="script.css">
 </head>
 <body>
     <header>
-        <h1>GLAT Acadamy</h1>
+        <h1>GLAT Academy</h1>
         <p>A Place where learning never stops, because life never stops teaching</p>
     </header>
     <nav>
@@ -16,24 +16,28 @@
         <a href="/Progress Report/progress.html">Services</a>
         <a href="/Contact Us/contact.html">Contact</a>
         <a href="/Sign UP Page/sign.html">SignUp</a>
+        <a href="/Login Page/login.html">Login</a>
     </nav>
     <section id="about">
-        <h2>About Us</h2>
-        <p><small><h1>Welcome to GLAT Academy</h1></small>
-
-            At GLAT Academy, we are passionate about creating an inclusive and nurturing learning environment for children with unique needs. Our mission is to empower every child to unlock their full potential 
-            by providing specialized tools, resources, and support tailored to their individual requirements.</p>
-
-        <p><small><h1>Our Vision</h1></small>
-            To be a beacon of hope and innovation in education by offering cutting-edge 
-            solutions for children with learning differences, disabilities, or unique challenges.</p>
-    </section>
-    
-      
-        
+        <div class="content-wrapper">
+            <div class="content-box">
+                <h2>About Us</h2>
+                <p>Welcome to <strong>GLAT Academy</strong>. We are passionate about creating an inclusive and nurturing learning environment for children with unique needs.</p>
+                <div class="hover-effect" onclick="showAlert()">Click me to learn more</div>
+            </div>
+            <div class="content-box">
+                <h2>Our Vision</h2>
+                <p>To be a beacon of hope and innovation in education by offering cutting-edge solutions for children with learning differences, disabilities, or unique challenges.</p>
+            </div>
+        </div>
     </section>
     <footer>
-        <p>&copy; 2025 GLAT ACADAMY <br> All rights reserved.</p>
+        <p>&copy; 2025 GLAT Academy. All rights reserved.</p>
     </footer>
+    <script>
+        function showAlert() {
+            alert('Thank you for showing interest in GLAT Academy! Stay tuned for more updates.');
+        }
+    </script>
 </body>
 </html>
